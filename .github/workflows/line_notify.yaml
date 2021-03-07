@@ -6,7 +6,8 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - uses: snow-actions/line-notify@v1.0.0
+      # - uses: snow-actions/line-notify@v1.0.0
+      - uses: jun-shimoji/gha-sample
         with:
           access_token: ${{ secrets.LINE_ACCESS_TOKEN }}
           message: "hello world"
