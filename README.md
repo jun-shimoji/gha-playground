@@ -16,13 +16,13 @@ gh api repos/:OWNER/:REPO/actions/workflows
 * workflow_idを確認
 
 ```
-gh api repos/linefukuoka/:REPO-develop/actions/runs| jq .workflow_runs[].workflow_id
+gh api repos/:OWNER/:REPO/actions/runs| jq .workflow_runs[].workflow_id
 ```
 
 * run_idを確認
 
 ```
-gh api repos/linefukuoka/:REPO-develop/actions/runs| jq .workflow_runs[].id
+gh api repos/:OWNER/:REPO/actions/runs| jq .workflow_runs[].id
 ```
 
 * 指定workflow_idのrun_idを確認
@@ -36,5 +36,5 @@ gh api repos/:OWNER/:REPO/actions/runs --paginate|jq '.workflow_runs[] | select(
 
 ```
 gh api repos/:owner/:rep/actions/runs/260847608 -X DELETE
-gh api repos/linefukuoka/:REPO-develop/actions/runs/260847608 -X DELETE
+gh api repos/:OWNER/:REPO/actions/runs/260847608 -X DELETE
 ```
